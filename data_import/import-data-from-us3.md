@@ -3,7 +3,8 @@
 AI Database 支持使用 `INSERT INTO ... SELECT * FROM read_xxx()` 从 US3 对象存储直接导入数据，可通过以下语法高效加载外部文件至数据库表中：
 
 > 说明
-> 关于 US3 访问凭证（`accessid` 和 `secret`）的获取和配置，请参考[TODO 访问US3数据](#文档还没写，后续补充后再添加连接)文档。
+> 关于 US3 访问凭证（`accessid` 和 `secret`）的获取和配置，请参考[访问US3数据](DuckDB_Instruction/access-us3.md)文档。
+
 
 ## 基本语法
 

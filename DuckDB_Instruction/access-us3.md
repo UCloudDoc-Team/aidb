@@ -18,7 +18,7 @@ SELECT * FROM read_json('s3://<endpoint>/<bucket>/<prefix>/file.json accessid=xx
 
 ### 方式二：预配置密钥后直接访问
 
-[预访问密钥](/DuckDB 手册/manage-keys.md)后，即可直接通过路径访问，无需在查询中显式填写凭证：
+[预访问密钥](/DuckDB_Instruction/manage-keys.md)后，即可直接通过路径访问，无需在查询中显式填写凭证：
 
 ```sql
 SELECT * FROM read_csv('s3://<bucket>/<prefix>/file.csv');

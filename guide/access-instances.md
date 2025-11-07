@@ -85,14 +85,77 @@ ResultSet rs = stmt.executeQuery("SELECT version();");
 // 关闭连接
 ...
 ```
+
 > 提示
 > 所有内网访问均需确保云主机与 AI Database 实例处于同一 VPC 网络内，并开放相应端口（默认为 5432）以确保连通性。
 
+
 ## 外网访问
 
-【TODO 拷贝 nginx 文档 [https://docs.ucloud.cn/maxir/guides/dps-clusters/access-dps-clusters?id=%e6%96%b9%e5%bc%8f%e4%b8%80%ef%bc%9a%e9%80%9a%e8%bf%87-postgres-client-psql-%e8%ae%bf%e9%97%ae-1](https://docs.ucloud.cn/maxir/guides/dps-clusters/access-dps-clusters?id=%e6%96%b9%e5%bc%8f%e4%b8%80%ef%bc%9a%e9%80%9a%e8%bf%87-postgres-client-psql-%e8%ae%bf%e9%97%ae-1)】
+### 方式一：通过 postgres client psql 访问
 
-配置 nginx 后，使用 nginx ip 进行连接。连接方式同【TODO 内网访问 link】
+通过 Nginx 配置反向代理来进行外网访问。
+
+1. 创建一台与 AI Database 实例处于同一子网下的外网云主机。
+
+2. 在云主机上安装 Nginx。
+
+    ```shell
+    yum install -y nginx
+    ```
+3. 配置 nginx 代理。
+
+    3.1 编辑 `/etc/nginx/nginx.conf`，增加 `stream` 配置。
+
+    ```shell
+    stream {
+        log_format proxy '$remote_addr [$time_local] '
+                    '$protocol $status $bytes_sent $bytes_received '
+                    '$session_time "$upstream_addr" '
+                    '"$upstream_bytes_sent" "$upstream_bytes_received" "$upstream_connect_time"';
+
+        access_log /var/log/nginx/tcp-access.log proxy;
+        open_log_file_cache off;
+
+        # 统一放置，方便管理
+        include /etc/nginx/tcpConf.d/*.conf;
+    }
+    ```
+
+    3.2 创建 `/etc/nginx/tcpConf.d/` 目录。
+
+    ```shell
+    mkdir -p /etc/nginx/tcpConf.d/
+    ```
+    3.3 编辑 `/etc/nginx/tcpConf.d/maxir.conf` 配置文件。
+
+    ```shell
+    upstream maxir_tcp5432 {
+        server ${MAXIR_IP}:5432; // 其中MAXIR_IP为MAXIR的接入地址ip
+    }
+    server {
+        listen 5432;
+        proxy_connect_timeout 8s;
+        proxy_timeout 24h;
+        proxy_pass maxir_tcp5432;
+    }
+    ```
+    3.4 进行应用配置。
+
+    ```shell
+    nginx -s reload
+    ```
+
+4. 开通云主机外网防火墙端口 `5432`。
+
+5. 通过 pg 客户端进行登录验证。
+
+    ```shell
+    psql -h ${IP} -p 5432 -U ${用户名} -d postgres
+    ```
+
+    其中，`${IP}` 为 ngnix 服务器的 IP 地址。
+
 
 ### 通过 GUI 客户端 pgAdmin 访问
 

@@ -11,12 +11,15 @@ AI Database 的 **pg_search** 插件是在开源项目 [Paradedb](https://github
 
 - 已完成 AI Database 实例创建，且实例处于可用状态。
 
+    关于如何创建实例，请参考[实例管理](guide/manage-instances.md#创建实例)对应章节。
+
 - 已创建数据库用户。
+
+    关于如何创建数据库用户，请参考[实例管理](guide/manage-users.md#创建用户)对应章节。
 
 - 已成功连接到数据库。
 
-> 提示
-> 若需了解实例创建、用户管理及连接方法，请参阅[相关操作文档](#链接至对应的文档)。
+    关于如何链接至数据库，请参考[访问实例](guide/access-instances.md)。
 
 
 ## 核心优势

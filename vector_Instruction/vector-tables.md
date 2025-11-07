@@ -24,6 +24,7 @@ CREATE TABLE <table_name>(
 > 说明
 > 与 `vector` 相比，`vecf16` 不仅存储成本小一倍，同时计算性能快一倍，且准度相同，因此更为推荐使用。
 
+
 ## 示例
 
 执行如下命令，创建一个名为 `FACE_TABLE` 的堆表，其中 `id` 为主键，`embedding` 为向量列。
