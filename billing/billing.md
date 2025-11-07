@@ -8,7 +8,7 @@ AI Database 产品目前的计费项目包含 **计算单元** 和 **数据
 
 ## 计费规则
 
-AI Database 按使用量后付费，每小时统计用户使用量，您可前往[财务中心](https://console.ucloud.cn/uaccount/bills/detail) 查看账单明细，账单粒度为项目。
+AI Database 按使用量后付费，每小时统计用户使用量，您可前往 [财务中心](https://console.ucloud.cn/uaccount/bills/detail) 查看账单明细，账单粒度为项目。
 
 各计费项的计费规则详情如下：
 

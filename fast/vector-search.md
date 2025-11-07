@@ -6,15 +6,15 @@
 
 - 已完成 AI Database 实例创建，且实例处于可用状态。
 
-    关于如何创建实例，请参考[实例管理](guide/manage-instances.md#创建实例)对应章节。
+    关于如何创建实例，请参考[实例管理](/aidb/guide/manage-instances.md#创建实例)对应章节。
 
 - 已创建数据库用户。
 
-    关于如何创建数据库用户，请参考[实例管理](guide/manage-users.md#创建用户)对应章节。
+    关于如何创建数据库用户，请参考[实例管理](/aidb/guide/manage-users.md#创建用户)对应章节。
 
 - 已成功连接到数据库。
 
-    关于如何链接至数据库，请参考[访问实例](guide/access-instances.md)。
+    关于如何链接至数据库，请参考[访问实例](/aidb/guide/access-instances.md)。
 
 
 
@@ -48,7 +48,7 @@ ON test_tbl
 USING vectors (embedding vector_l2_ops);
 ```
 
-> 说明
+> 说明<br>
 > `vector_l2_ops` 为向量运算符类，用于计算平方欧氏距离（L2 距离）。
 
 ## 步骤 3：执行向量搜索
@@ -64,7 +64,7 @@ ORDER BY dist
 LIMIT 5;
 ```
 
-> 说明
+> 说明<br>
 > `<->` 运算符用于计算向量间的相似度（此处为 L2 距离），结果按距离升序排列，数值越小表示越相似。
 
 
