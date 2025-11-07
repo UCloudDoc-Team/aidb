@@ -68,7 +68,7 @@ $$);
 | :- | :- | :- | :- | :- |
 | `m` | `integer` | [4, 128] | `12` | 节点的最大度数。 |
 | `ef_construction` | `integer` | [10, 2000] | `300` | 构建中的搜索范围。 |
-| `quantization` | `table` | `trivial`、`scalar` 或 `product` | N/A | 可选值为：<br>`trivial`：不使用量化<br>`scalar`：使用标量量化<br>`product`：使用乘积量化（推荐）<br>计算距离使用的量化算法，其具体参数见[下方表格](https://docs.relyt.cn/docs/vector-engine/user-guide/indexing/#quantizationproduct-%E7%9A%84%E9%80%89%E9%A1%B9)。 |
+| `quantization` | `table` | `trivial`、`scalar` 或 `product` | N/A | 可选值为：<br>`trivial`：不使用量化<br>`scalar`：使用标量量化<br>`product`：使用乘积量化（推荐）<br>计算距离使用的量化算法，其具体参数见下方表格”`quantization.product` 的选项“。 |
 
 - `quantization.product` 的选项
     

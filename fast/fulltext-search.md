@@ -15,7 +15,7 @@ AI Database 的 **pg_search** 插件是在开源项目 [Paradedb](https://github
 
 - 已创建数据库用户。
 
-    关于如何创建数据库用户，请参考[实例管理](/aidb/guide/manage-users.md#创建用户)对应章节。
+    关于如何创建数据库用户，请参考[用户管理](/aidb/guide/manage-users.md#创建用户)对应章节。
 
 - 已成功连接到数据库。
 

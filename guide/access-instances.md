@@ -86,7 +86,7 @@ ResultSet rs = stmt.executeQuery("SELECT version();");
 ...
 ```
 
-> 提示
+> 提示<br>
 > 所有内网访问均需确保云主机与 AI Database 实例处于同一 VPC 网络内，并开放相应端口（默认为 5432）以确保连通性。
 
 

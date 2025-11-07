@@ -7,8 +7,7 @@ AI Database 是一款专为 AI 应用设计的全功能数据库，集成数据�
 # 系统架构
 AI Database 采用 存算分离 + 无状态计算节点池（Stateless Compute Pool） 架构，以对象存储为中心构建高可靠、弹性伸缩的 Serverless 数据平台。通过将计算、缓存、存储和日志服务解耦，系统在性能、成本与可维护性之间实现最优平衡。
 
-![](/aidb/guide/img/jiagou.jpg)
-
+![image](/guide/img/jiagou.jpg)
 
 ## 核心能力
 
