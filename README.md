@@ -4,7 +4,7 @@
 
 * [产品动态](/aidb/news/news.md)
 * [产品简介](/aidb/introduction/what-is-ai-database.md)
-* [购买指南](/aidb/billing/billing.md)
+* [购买指南](/aidb/billing/charge.md)
 * 快速上手
   * [DuckDB分析引擎](/aidb/fast/duckdb-engine.md)
   * [全文检索](/aidb/fast/fulltext-search.md)
