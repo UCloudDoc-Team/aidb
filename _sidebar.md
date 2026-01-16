@@ -16,9 +16,13 @@
   * [向量索引](/aidb/vector_Instruction/vector-indexing.md)
   * [向量检索](/aidb/vector_Instruction/vector-search.md)
   * [向量表](/aidb/vector_Instruction/vector-tables.md)
+  * [性能测试报告](/aidb/vector_Instruction/perf-metrics.md)
 * DuckDB手册
   * [访问US3数据](/aidb/DuckDB_Instruction/access-us3.md)
   * [秘钥管理](/aidb/DuckDB_Instruction/manage-keys.md)
+  * [性能测试报告](/aidb/DuckDB_Instruction/perf-metrics.md)
+* [最佳实践](/aidb/practices/pg-cron-async-vector-index.md)
+  
 
 
 
